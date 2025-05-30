@@ -19,7 +19,7 @@ jobs:
         uses: actions/checkout@v4  
 
       - name: get aws permissions
-        uses: aws-actions/configure-aws-credentialsv@4
+        uses: aws-actions/configure-aws-credentialsv@3
         with: 
           role-to-assume: arn:aws:iam::975049930561:role/github-infra
           aws_region: eu-west-2  
