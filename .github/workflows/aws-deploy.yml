@@ -33,11 +33,14 @@ jobs:
       - name: Terraform init
         id: init
         run: terraform init 
+        working-directory: aws-deploy
 
       - name: Terraform plan
         id: plan 
         run: terraform plan
+        working-directory: aws-deploy
         
       - name: Terraform Apply 
         run: terraform apply -auto-approve
+        working-directory: aws-deploy
     
