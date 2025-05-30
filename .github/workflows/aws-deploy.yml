@@ -40,7 +40,7 @@ jobs:
         run: terraform plan
         working-directory: aws-deploy
         
-      - name: Terraform distroy 
-        run: terraform distroy -auto-approve
+      - name: Terraform destroy 
+        run: terraform destroy -auto-approve
         working-directory: aws-deploy
     
