@@ -34,9 +34,14 @@ jobs:
         id: init
         run: terraform init
         working-directory: aws-deploy
+
+      - name: Terraform plan
+        id: plan
+        run: terraform plan
+        working-directory: aws-deploy
         
-      - name: Terraform destroy
-        id: destroy 
-        run: terraform destroy -auto-approve
+      - name: Terraform apply
+        id: apply 
+        run: terraform apply -auto-approve
         working-directory: aws-deploy
     
