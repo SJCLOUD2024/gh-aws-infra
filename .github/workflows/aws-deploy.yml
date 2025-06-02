@@ -21,7 +21,7 @@ jobs:
       - name: get aws permissions
         uses: aws-actions/configure-aws-credentials@v4
         with: 
-          role-to-assume: arn:aws:iam::<YOUR_ACCOUNT_ID>:role/github-infra
+          role-to-assume: arn:aws:iam::975049930561:role/github-infra
           aws-region: eu-west-2  
 
       - name: Setup Terraform
@@ -29,11 +29,6 @@ jobs:
         with:
           terraform_version: "1.1.7"
           terraform_wrapper: false
-
-      - name: Terraform init
-        id: init
-        run: terraform init 
-        working-directory: aws-deploy
 
       - name: Terraform plan
         id: plan 
